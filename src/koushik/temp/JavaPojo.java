@@ -1,13 +1,15 @@
 package koushik.temp;
 
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
-public class Student implements Comparable<Student> {
+class Student1 implements Comparable<Student> {
     int rollNumber;
     String name;
     int age;
 
-    public Student(int rollNumber, String name, int age) {
+    public Student1(int rollNumber, String name, int age) {
         this.rollNumber = rollNumber;
         this.name = name;
         this.age = age;
@@ -47,4 +49,26 @@ public class Student implements Comparable<Student> {
             return Integer.compare(s2.getAge(), s1.getAge());
         }
     };
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNumber=" + rollNumber +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+public class JavaPojo{
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(1,"maruthi",21));
+        students.add(new Student(2,"shiva",20));
+        students.add(new Student(3,"karthik",17));
+        students.add(new Student(4,"nithin",25));
+        students.add(new Student(5,"koushik",21));
+       for(Student student : students){
+           System.out.println(student);
+       }
+    }
 }

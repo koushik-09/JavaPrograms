@@ -3,9 +3,9 @@ import java.util.*;
 public class SubSet {
     public static void main(String[] args) {
         int[] arr = {1,2,3};
-//        System.out.println(permutations(arr));
-//        System.out.println(Arrays.toString(Arrays.copyOfRange(arr,1,arr.length)));
-        System.out.println(subsets(arr));
+        System.out.println(permutations(arr));
+////        System.out.println(Arrays.toString(Arrays.copyOfRange(arr,1,arr.length)));
+//        System.out.println(subsets(arr));
     }
 
     public static List<List<Integer>> permutations(int[] arr){
@@ -26,6 +26,7 @@ public class SubSet {
             l1.add(i,arr[0]);
             System.out.println(l1);
             subSets(ans,l1,Arrays.copyOfRange(arr,1,arr.length),++x);
+
             x--;
         }
     }
